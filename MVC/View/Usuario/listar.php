@@ -1,13 +1,12 @@
 <?php
-class UsuarioView {
-  public function exibirUsuarios(array $usuarios)
-  {
+
     if (empty($usuarios)) {
       echo "<p>Nenhum usuário encontrado!</p>";
       return;
     }
 
     echo "<table border='1' cellpadding='5' cellspacing='0'>";
+    echo"<tr><td><a href='View/Usuario/cadastrar.php'>Cadastrar</a></td></tr>";
     echo "<tr>
         <th>ID</th>
         <th>Nome</th>
@@ -27,12 +26,8 @@ class UsuarioView {
       echo "</tr>";
     }
 
-    echo "</table>";
-  }
+   
+  
 
-  // Exibir mensagens de sucesso ou erro
-  public function mensagem($texto)
-  {
-    echo "<p><strong>{$texto}</strong></p>";
-  }
-}
+  // Exibir mensagens de sucesso ou er
+ echo "</table>";

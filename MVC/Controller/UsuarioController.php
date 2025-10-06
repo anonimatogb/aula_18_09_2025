@@ -1,6 +1,5 @@
 <?php
-require_once "View/UsuarioView.php";
-require_once "Model/UsuarioModel.php";
+require_once "C:/Turma1/xampp/htdocs/aula_18_09_2025/MVC/Model/UsuarioModel.php";
 
 class UsuarioController {
     private $usuarioModel;
@@ -11,9 +10,25 @@ class UsuarioController {
 
     public function listar() {
         $usuarios = $this->usuarioModel->buscarTodos();
-        $view = new UsuarioView();
-        $view->exibirUsuarios($usuarios);
-        return $view;
+        include_once "C:/Turma1/xampp/htdocs/aula_18_09_2025/MVC/View/Usuario/listar.php";
+        return;
     }
+     public function buscarUsuario($id) {
+        $usuario = $this->usuarioModel->buscarUsuario($id);
+        return $usuario;
+    }
+ 
+    public function cadastrar($nome,$email,$senha){
+return $this-> usuarioModel->cadastrar($nome,$email,$senha);
+
+
+    }
+   public function editar($nome,$email,$senha,$id){
+ $this-> usuarioModel->editar($nome,$email,$senha, $id);
+
+
+    }
+
+
 }
 ?>
