@@ -21,8 +21,8 @@
       echo "<td>{$usuario['nome']}</td>";
       echo "<td>{$usuario['email']}</td>";
       echo "<td>
-<a href='editar.php?id={$id}'>Editar</a> 
-<a href='deletar.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir este usuário?')\">Deletar</a></td>";
+<a href='View/Usuario/editar.php?id={$id}'>Editar</a> 
+<a href='View/Usuario/deletar.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir este usuário?')\">Deletar</a></td>";
       echo "</tr>";
     }
 

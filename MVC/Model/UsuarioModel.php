@@ -21,7 +21,7 @@ class UsuarioModel {
 
 
     public function cadastrar($nome,$email,$senha){
-$sql = "*INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)";
+$sql = "INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)";
 $stmt = $this->pdo->prepare($sql);
 return $stmt->execute([
     ':nome' => $nome,
@@ -36,7 +36,7 @@ return $stmt->execute([
    public function editar($nome,$email,$senha,$id){
 $sql = "UPDATE usuarios SET nome=?, email=?, senha=? WHERE id=?";
 $stmt = $this->pdo->prepare($sql);
-return $stmt->execute([$nome,$email,$senha]);
+return $stmt->execute([$nome,$email,$senha,$id]);
 
 
     }

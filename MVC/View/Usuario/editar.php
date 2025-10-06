@@ -50,6 +50,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $senha = $_POST['senha'];
 
   $UsuarioController ->editar($nome,$email,$senha,$id);
-  header('Location: C:/Turma1/xampp/htdocs/aula_18_09_2025/MVC/index.php ');
+  header('Location: ../../index.php ');
 }
 ?>
