@@ -11,7 +11,7 @@ class UsuarioController {
     public function listar() {
         $usuarios = $this->usuarioModel->buscarTodos();
         include_once "C:/Turma1/xampp/htdocs/aula_18_09_2025/MVC/View/Usuario/listar.php";
-        return;
+        return $usuarios;
     }
      public function buscarUsuario($id) {
         $usuario = $this->usuarioModel->buscarUsuario($id);
@@ -30,5 +30,10 @@ return $this-> usuarioModel->cadastrar($nome,$email,$senha);
     }
 
 
+     public function deletar($id){
+ $usuario = $this-> usuarioModel->deletar($id);
+return $usuario;
+
+    }
 }
 ?>

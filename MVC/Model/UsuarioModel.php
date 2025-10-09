@@ -43,6 +43,16 @@ return $stmt->execute([$nome,$email,$senha,$id]);
 
 
 
+    public function deletar($id){
+$sql = "DELETE FROM usuarios WHERE id = ?";
+$stmt = $this->pdo->prepare($sql);
+return $stmt->execute([
+   $id
+]);
+
+
+    }
+
 
 
 }
