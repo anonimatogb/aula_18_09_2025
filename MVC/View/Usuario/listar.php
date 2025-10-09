@@ -2,6 +2,7 @@
 
     if (empty($usuarios)) {
       echo "<p>Nenhum usuário encontrado!</p>";
+       echo"<a href='View/Usuario/cadastrar.php'>Cadastrar</a>";
       return;
     }
 

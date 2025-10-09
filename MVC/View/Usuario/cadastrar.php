@@ -35,6 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $senha = $_POST['senha'];
 
   $UsuarioController -> cadastrar($nome,$email,$senha);
+  header("Location: ../../index.php");
 }
 
 
